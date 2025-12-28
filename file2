@@ -12,7 +12,7 @@ mvn archetype:generate \
 -DartifactId=DeployToContainer \
 -DinteractiveMode=false \
 -U
-
+cd /opt/tomcat/conf
 cd helloworld/target
  cp helloworld.war /opt/tomcat/webapps
 
@@ -28,4 +28,4 @@ https://dlcdn.apache.org/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.t
   <user username="tomcatscript" password="tomcatscriptpwd" roles="manager-script"/>
 
 usermod -aG root ec2-user
-[root@y22acs578-jenkins ~]# chmod -R g+w /opt/tomcat/webapps/
+[root@y22acs578-tomcat ~]# chmod -R g+w /opt/tomcat/webapps/
